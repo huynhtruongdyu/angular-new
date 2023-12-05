@@ -1,0 +1,9 @@
+[data-theme="light"] {
+  --background-color: var(--c-white);
+  --text-default-color: var(--c-black);
+}
+
+[data-theme="dark"] {
+  --background-color: var(--c-black);
+  --text-default-color: var(--c-white);
+}
