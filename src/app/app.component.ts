@@ -3,8 +3,8 @@ import { CommonModule } from '@angular/common';
 import { RouterOutlet } from '@angular/router';
 import { CoreModule } from '@core/core.module';
 import { ThemeSwitcherComponent } from '@core/components/theme-switcher/theme-switcher.component';
-import { LocalStorageService } from '@core/services/local-storage.service';
-import { CryptoService } from '@core/services/crypto.service';
+import { LocalStorageService } from '@core/services/storages/local-storage.service';
+import { CryptoService } from '@core/services/securities/crypto.service';
 
 @Component({
   selector: 'app-root',
@@ -23,8 +23,18 @@ export class AppComponent implements OnInit {
 
 
   ngOnInit(): void {
-    this._localStorageService.set('hehe', this._cryptoService.encrypt('hehe'));
+    this.initTheme();
   }
 
+  initTheme() {
+    const themeEncrypted = this._localStorageService.get('theme');
+    console.log('theme', themeEncrypted);
+    if (themeEncrypted == null) {
+      this._localStorageService.set('theme', this._cryptoService.encrypt('light'));
+    }
+    const themeDecrypted = this._cryptoService.decrypt(themeEncrypted!);
+    console.log('themeDecrypted', themeDecrypted);
+    document.body.setAttribute('data-theme', this._cryptoService.decrypt(themeDecrypted));
+  }
 
 }

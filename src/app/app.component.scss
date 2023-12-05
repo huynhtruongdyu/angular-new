@@ -1,3 +1,39 @@
-h1 {
+@import "../styles/variables";
+* {
   color: var(--text-default-color);
+}
+
+.root {
+  display: flex;
+  flex-direction: column;
+
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-color: gainsboro;
+
+  .header {
+    height: 50px;
+    background-color: gray;
+  }
+
+  .body {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    background-color: aliceblue;
+
+    .side-bar {
+      display: flex;
+      width: 70px;
+    }
+
+    .content {
+      flex: 1;
+      display: flex;
+      border-top-left-radius: $border-radius-1;
+      background-color: gainsboro;
+      padding: 8px;
+    }
+  }
 }

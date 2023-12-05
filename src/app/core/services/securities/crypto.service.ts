@@ -18,4 +18,5 @@ export class CryptoService {
   public decrypt(txtToDecrypt: string) {
     return CryptoJS.AES.decrypt(txtToDecrypt, this.key).toString(CryptoJS.enc.Utf8);
   }
+
 }

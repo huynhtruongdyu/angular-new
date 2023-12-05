@@ -10,7 +10,7 @@ import { Component } from '@angular/core';
 export class ThemeSwitcherComponent {
   public isLightTheme = true;
   constructor() {
-    this.isLightTheme = document.body.getAttribute('data-theme') == 'light';
+    // this.isLightTheme = document.body.getAttribute('data-theme') == 'light';
   }
 
   onThemeSwitchChange() {

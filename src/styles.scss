@@ -1,7 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
 @import "./styles/reset";
+@import "./styles//colors";
 @import "./styles/variables";
 @import "./styles/themes";
+@import "./styles/fonts";
+
+* {
+  font-family: "Roboto", sans-serif;
+}
 
 body {
   background-color: var(--background-color);
