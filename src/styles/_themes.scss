@@ -1,9 +1,15 @@
 [data-theme="light"] {
-  --background-color: var(--c-white);
+  --background-color: var(--c-bg-white);
+  --background-sub-color: var(--c-bg-white-sub);
+  --background-text-input-color: var(--c-white);
   --text-default-color: var(--c-black);
+  --text-default-input-color: var(--c-black);
 }
 
 [data-theme="dark"] {
-  --background-color: var(--c-black);
+  --background-color: var(--c-bg-black);
+  --background-sub-color: var(--c-bg-black-sub);
+  --background-text-input-color: var(--c-bg-black-1);
   --text-default-color: var(--c-white);
+  --text-default-input-color: var(--c-white);
 }

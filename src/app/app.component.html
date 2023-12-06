@@ -1,10 +1,106 @@
 <div class="root">
-  <div class="header">header</div>
+  <div class="header">
+    <div class="brand">
+      <img src="../assets/images/brands/microsoft_store.png" height="17" width="17" />
+      <span>Microsoft Store</span>
+    </div>
+    <div class="search">
+      <div class="search-bar" [ngStyle]="{'border-bottom': (showSearchResult || searchValue)?'.5px solid blue':'none'}">
+        <input [(ngModel)]="searchValue" type="search" placeholder="Search any things..."
+          (focus)="setShowSearchResult(true)" (blur)="setShowSearchResult(false)" />
+        <!-- <button>X</button> -->
+        <img src="" />
+        <div class="search-result" *ngIf="showSearchResult">
+          {{searchValue}}
+          <div class="search-result-container">
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+            <div class="search-result-row">
+              Item 1
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="actions"></div>
+  </div>
   <div class="body">
-    <div class="side-bar">aside</div>
+    <div class="side-bar"><app-theme-switcher /></div>
     <div class="content">
-      main
-      <app-theme-switcher />
+
     </div>
   </div>
 </div>
